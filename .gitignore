@@ -1,0 +1,53 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.env
+
+# macOS system files
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Build directories
+dist/
+build/
+out/
+coverage/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Git
+.git/
+*.orig
+
+
+auth_info_listener/
+messages.json
+package.json
+package-lock.json
