@@ -1,10 +1,9 @@
 from crewai import Agent
 
-def create_messenger_agent():
+def create_messenger_agent(llm):
     return Agent(
         role="Messenger",
-        goal="Format the selected jobs in a WhatsApp-friendly summary",
-        backstory="Professional communicator",
-        tools=[],  # Could add send tool later
-        allow_delegation=False
+        goal="Write clear and basic programming examples",
+        backstory="A helpful AI that generates simple code.",
+        llm=llm  # <-- LangChain-compatible LLM
     )
