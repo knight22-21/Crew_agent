@@ -1,15 +1,15 @@
-from crewai_tools import tool
-from llm.local_llm import local_llm  # We'll build this in Phase 3
+from crewai.tools import tool
+from llm.local_llm import local_llm  
 
 @tool("filter_jobs_tool")
 def filter_jobs_tool(job_text: str) -> str:
-    """Uses LLM to filter job listings that are remote and NLP-focused"""
-    prompt = f"""You're an expert job filterer.
-List only jobs from the below input that are:
+    """Filters jobs for remote + AI/NLP/ML relevance using Hugging Face T5"""
+    prompt = f"""
+Filter the following job listings and return only the ones that are:
 - Remote
-- Related to NLP, AI, or ML
+- Related to AI, NLP, or ML
 
-Jobs:
 {job_text}
 """
     return local_llm(prompt)
+
